@@ -1,1 +1,26 @@
-* {}
+:root {
+    --off-with: 270px;
+    --top-navbar: 72px
+}
+
+.sidebar-nav {
+    width: var(--off-with) !important
+}
+
+@media (min-width:992px) {
+    body {
+        overflow: auto !important;
+    }
+
+    .offcanvas-backdrop::before {
+        display: none;
+    }
+
+    .sidebar-nav {
+        transform: none !important;
+        visibility: visible !important;
+        top: var(--top-navbar) !important;
+        height: calc(100% - var(--top-navbar));
+        /* position: relative; */
+    }
+}
